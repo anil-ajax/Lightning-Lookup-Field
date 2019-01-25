@@ -1,0 +1,7 @@
+public class inputLookupController {
+    @auraEnabled
+    public static List<account> getRecords(string inputTxt) {
+        inputTxt = '%'+inputTxt+'%';
+        return [select Id, Name from account where Name like :inputTxt];
+    }
+}
