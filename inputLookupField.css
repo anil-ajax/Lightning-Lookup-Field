@@ -1,0 +1,14 @@
+.THIS .record{
+    border-bottom: 1px solid #ccc;
+    padding: 2px;
+        cursor: pointer;
+}
+
+.THIS .records{
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+.THIS .red{
+    border: 1px solid red;
+    padding: 5px;
+}
