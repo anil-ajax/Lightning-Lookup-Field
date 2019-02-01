@@ -1,5 +1,8 @@
 <aura:component controller="inputLookupController">
     
+    <aura:attribute name="objNameAttr" type="string" />
+    <lightning:input value="{!v.objNameAttr}" type="hidden" />
+    
     <ltng:require scripts="{!$Resource.jquery331}" />
     
     <aura:attribute name="inputTxtAttr" type="string" />
@@ -8,7 +11,7 @@
     <aura:attribute name="selectedRecordId" type="string" />
     <lightning:input type="hidden" value="{!v.selectedRecordId}" class="selectedRecordId" id="selectedRecordId" />
     
-    <aura:attribute name="recordsList" type="account" />
+    <aura:attribute name="recordsList" type="sObject" />
     
     <div class="records">
         <aura:iteration items="{!v.recordsList}" var="record">
