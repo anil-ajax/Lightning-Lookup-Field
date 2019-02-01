@@ -1,7 +1,8 @@
 public class inputLookupController {
     @auraEnabled
-    public static List<account> getRecords(string inputTxt) {
-        inputTxt = '%'+inputTxt+'%';
-        return [select Id, Name from account where Name like :inputTxt];
+    public static List<sObject> getRecords(string inputTxt, string objName) {
+        inputTxt = '\'%'+inputTxt+'%\'';
+        String Query = 'Select Id, Name FROM '+objName+' WHERE Name LIKE ' + inputTxt;
+        return Database.Query(Query);
     }
 }
